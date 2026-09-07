@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>eu.athenahouse.springhedgie</groupId>
+	<artifactId>springhedgie-parent</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>SpringHedgie (parent)</name>
+	<description>Swagger-like, browsable documentation and "Try it out" UI for Spring AI @Tool / @McpTool methods.</description>
+	<url>https://github.com/BartekDziurowicz/springhedgie</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Bartosz Dziurowicz</name>
+			<url>https://github.com/BartekDziurowicz</url>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/BartekDziurowicz/springhedgie</url>
+		<connection>scm:git:https://github.com/BartekDziurowicz/springhedgie.git</connection>
+		<developerConnection>scm:git:https://github.com/BartekDziurowicz/springhedgie.git</developerConnection>
+	</scm>
+
+	<properties>
+		<maven.compiler.source>25</maven.compiler.source>
+		<maven.compiler.target>25</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring-boot.version>4.1.1</spring-boot.version>
+		<spring-ai.version>2.0.1</spring-ai.version>
+	</properties>
+
+	<modules>
+		<module>springhedgie-autoconfigure</module>
+		<module>springhedgie-spring-boot-starter</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.ai</groupId>
+				<artifactId>spring-ai-bom</artifactId>
+				<version>${spring-ai.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

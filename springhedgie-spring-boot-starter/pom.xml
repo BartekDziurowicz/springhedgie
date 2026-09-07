@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>eu.athenahouse.springhedgie</groupId>
+		<artifactId>springhedgie-parent</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>springhedgie-spring-boot-starter</artifactId>
+	<packaging>jar</packaging>
+	<name>SpringHedgie Spring Boot Starter</name>
+	<description>
+		Add this single dependency to your Spring Boot app to get a Swagger-like,
+		browsable documentation and "Try it out" UI for your Spring AI @Tool / @McpTool
+		methods, at /springhedgie/index.html.
+	</description>
+
+	<!--
+		Intentionally empty besides this one dependency, following the standard
+		Spring Boot starter convention (e.g. spring-boot-starter-web -> spring-boot-autoconfigure).
+		All real code lives in springhedgie-autoconfigure.
+	-->
+	<dependencies>
+		<dependency>
+			<groupId>eu.athenahouse.springhedgie</groupId>
+			<artifactId>springhedgie-autoconfigure</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+</project>
