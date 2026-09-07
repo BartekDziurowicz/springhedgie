@@ -2,6 +2,8 @@
 
 > Swagger-like, browsable documentation UI — with a working **"Try it out"** — for Spring AI's `@Tool` and `@McpTool` annotated MCP tools, embedded directly in your own Spring Boot app.
 
+[![Maven Central](https://img.shields.io/maven-central/v/eu.athenahouse.springhedgie/springhedgie-spring-boot-starter)](https://central.sonatype.com/artifact/eu.athenahouse.springhedgie/springhedgie-spring-boot-starter)
+[![CI](https://github.com/BartekDziurowicz/springhedgie/actions/workflows/ci.yml/badge.svg)](https://github.com/BartekDziurowicz/springhedgie/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
 ## The problem
@@ -27,7 +29,7 @@ Add the starter to your Spring Boot application:
 <dependency>
     <groupId>eu.athenahouse.springhedgie</groupId>
     <artifactId>springhedgie-spring-boot-starter</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
@@ -74,8 +76,8 @@ This repository follows the standard Spring Boot starter convention:
 - [ ] Configurable base path
 - [ ] Optional Spring Security integration
 - [ ] Dedicated styling for `isError: true` tool responses
-- [ ] Publish to Maven Central under `eu.athenahouse.springhedgie`
-- [ ] GitHub Actions CI + tagged releases
+- [x] Publish to Maven Central under `eu.athenahouse.springhedgie`
+- [x] GitHub Actions CI + tagged releases
 
 ## License
 
